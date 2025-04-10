@@ -1,8 +1,11 @@
+using JetBrains.Annotations;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    // D�placement
+    public int vieMax = 20;
+    public int pv = 20;
+    // Déplacement
     private const float vitesseDeplacement = 10.0f;
 
     // Rotation
@@ -146,6 +149,12 @@ public class PlayerController : MonoBehaviour
 
         // Si aucun objet n'est détecté, on utilise la hauteur du terrain
         return new Vector3(transform.position.x, Mathf.Max(transform.position.y, hauteurTerrain), transform.position.z);
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        // Si le joueur est entré en collision avec un enemy, l'on perds des points de vie
+
     }
 
 }
