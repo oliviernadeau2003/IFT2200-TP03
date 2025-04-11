@@ -6,8 +6,8 @@
 		Obstacles : 
 		 
 		 - Dome feu de camps quand activer
-		 - 
-		 - 
+		 - Malédiction du masque de pharaon
+		 - Lac
 		 
 		Interactions : 
 		
@@ -25,7 +25,7 @@
 	
 	Graphes d’effets spéciaux (visual effect graph) 
 	[
-		- 
+		- Golden Globe
 		- 
 		- 
 	]
@@ -36,7 +36,7 @@
 	Shader graph 
 	[
 		- Dome actif lorsque le feu de camps est activé
-		- 
+		- Glowing masque pharaon
 		- 
 	]
 	
@@ -52,13 +52,13 @@
 			- Mask pharaon
 			- Nids
 			- Pile de bois
-			- 
+			- Golden globe
 			
 		Interactions avec items de l'inventaire (3) : 
 		
-			- Activation du feu de camp
+			- Pile de bois pour activer le feu de camp
 			- Pioche pour détèrer le masque de pharaon
-			- 
+			- Golden globe pour dévérouiller la porte et terminer le jeux
 		
 	]
 	
