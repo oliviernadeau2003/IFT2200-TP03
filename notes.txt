@@ -5,15 +5,15 @@
 	[ 
 		Obstacles : 
 		 
-		 - Dome feu de camps quand activer
-		 - Malédiction du masque de pharaon
-		 - Lac
+		 x Dome feu de camps quand activer
+		 x Malédiction du masque de pharaon
+		 x Lac
 		 
 		Interactions : 
 		
 		 - Effets post-traitement saignement
-		 - Faire jouer un sons de dommage
-		 - Perte de pv et fin de jeu lorsqu'a 0
+		 x Faire jouer un son de dommage
+		 x Perte de pv et fin de jeu lorsqu'a 0
 	]
 	
 		Un personnage affecté d’une animation en provenance du site Mixamo [www.mixamo.com] doit être bien intégré à l’environnement.

@@ -1,10 +1,15 @@
-using JetBrains.Annotations;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    public GameObject accueil;
     public int vieMax = 20;
     public int pv = 20;
+
+    // Hurt sound
+    public AudioClip hurtSound;
+    public AudioSource audioSource;
+
     // Déplacement
     private const float vitesseDeplacement = 10.0f;
 
@@ -15,6 +20,14 @@ public class PlayerController : MonoBehaviour
 
     // Terrain
     public float distanceDuSol = 1.5f;
+
+    private void Start()
+    {
+        pv = vieMax;
+        
+        audioSource = gameObject.AddComponent<AudioSource>();
+        audioSource.clip = hurtSound;
+}
 
     void Update()
     {
@@ -33,6 +46,7 @@ public class PlayerController : MonoBehaviour
         {
             transform.position = GestionTerrain();
         }
+
     }
 
     Vector3 Deplacement()
@@ -151,10 +165,26 @@ public class PlayerController : MonoBehaviour
         return new Vector3(transform.position.x, Mathf.Max(transform.position.y, hauteurTerrain), transform.position.z);
     }
 
-    private void OnCollisionEnter(Collision collision)
+    public void PlayerHit()
     {
-        // Si le joueur est entré en collision avec un enemie, l'on perds des points de vie
+        pv-=5;
+        if (pv <= 0)
+        {
+            // Player is dead
+            Debug.Log("Player is dead");
+            audioSource.Play();
+            accueil.SetActive(true);
+            gameObject.SetActive(false);
 
+            // Réactivation du curseur
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
+        }
+        else
+        {
+            // Play hurt sound
+            audioSource.Play();
+        }
     }
 
 }
