@@ -22,6 +22,7 @@ public class EnemyControllerScript : MonoBehaviour
 
         // Set the enemy's parent to this object
         enemy.transform.parent = transform;
+        enemy.SetActive(true);
     }
 
 

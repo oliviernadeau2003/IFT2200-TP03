@@ -1,4 +1,9 @@
+using System;
+using System.Collections;
+using System.Linq;
+using UnityEditor.Rendering;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 public class PlayerController : MonoBehaviour
 {
@@ -9,6 +14,9 @@ public class PlayerController : MonoBehaviour
     // Hurt sound
     public AudioClip hurtSound;
     public AudioSource audioSource;
+
+    // Volume
+    Volume volume;
 
     // Déplacement
     private const float vitesseDeplacement = 10.0f;
@@ -27,7 +35,10 @@ public class PlayerController : MonoBehaviour
         
         audioSource = gameObject.AddComponent<AudioSource>();
         audioSource.clip = hurtSound;
-}
+
+        volume = gameObject.GetComponent<Volume>();
+        volume.enabled = false;
+    }
 
     void Update()
     {
@@ -165,13 +176,12 @@ public class PlayerController : MonoBehaviour
         return new Vector3(transform.position.x, Mathf.Max(transform.position.y, hauteurTerrain), transform.position.z);
     }
 
-    public void PlayerHit()
+    private IEnumerator PlayerHit()
     {
-        pv-=5;
+        pv -= 5;
         if (pv <= 0)
         {
             // Player is dead
-            Debug.Log("Player is dead");
             audioSource.Play();
             accueil.SetActive(true);
             gameObject.SetActive(false);
@@ -179,12 +189,21 @@ public class PlayerController : MonoBehaviour
             // Réactivation du curseur
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;
+            yield return null;
         }
         else
         {
             // Play hurt sound
             audioSource.Play();
+            volume.enabled = true;
+            yield return new WaitForSeconds(1f);
+            volume.enabled = false;
         }
+    }
+
+    public void StartCoroutinePlayerHit()
+    {
+        StartCoroutine(PlayerHit());
     }
 
 }

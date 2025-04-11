@@ -11,7 +11,7 @@
 		 
 		Interactions : 
 		
-		 - Effets post-traitement saignement
+		 x Effets post-traitement saignement
 		 x Faire jouer un son de dommage
 		 x Perte de pv et fin de jeu lorsqu'a 0
 	]
@@ -23,9 +23,9 @@
 		Par exemple, modification d’effets post-traitement, modification de propriétés d’objets, faire jouer un son, fin du jeu, etc.
 	
 	
-	Graphes d’effets spéciaux (visual effect graph) 
+	Graphes d’effets spéciaux (visual effect graph) Particules
 	[
-		- Golden Globe
+		- Feu de camp
 		- 
 		- 
 	]
@@ -37,7 +37,7 @@
 	[
 		- Dome actif lorsque le feu de camps est activé
 		- Glowing masque pharaon
-		- 
+		- Golden Globe
 	]
 	
 		Au moins trois (3) objets affectés par différents shader graph doivent être présents et intégrés dans votre environnement.

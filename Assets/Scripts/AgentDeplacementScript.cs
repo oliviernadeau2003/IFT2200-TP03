@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -6,6 +7,8 @@ public class AgentDeplacementScript : MonoBehaviour
     NavMeshAgent agent;
     public Transform cible;
     public Transform spawnPoint;
+
+    public PlayerController playerController;
 
     void Start()
     {
@@ -18,7 +21,7 @@ public class AgentDeplacementScript : MonoBehaviour
 
         if (Vector3.Distance(cible.position ,gameObject.transform.position) <= 1.5)
         {
-            GameObject.Find("Main Camera").GetComponent<PlayerController>().PlayerHit();
+            playerController.StartCoroutinePlayerHit();
             transform.position = spawnPoint.position;
         }
     }
