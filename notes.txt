@@ -1,50 +1,69 @@
 
-	TP 2
+	TP 3
 	
-	 - Interpolation (5) Avec Interaction [Propriété]
-	 
-	  x Feu de camp (Logs coming up) then lit up using light sources and local volume
-	  x Porte (TP3 Clé)	(À REVOIR)
-	  x "Pickup" pickaxe
-	  x Digup pharaon mask
-	  x Nest (Up Scale then disappearing (As of it being picked up in inventory))
-	  
-	 - Interpolation (5) Sans Interaction
-	 
-	  x Porte (Ossillement)
-	  x Pharaon spotlight
-	  x Torch Oscille
-	  x Nest Shaking
-	  x Jumping Pickaxe
-	  
-	  
-	  x Color
-	  x Vector3
-	  x Float
-	 
-	 - Coroutines
-	  
-	  X Null
-	  x WaitForSeconds
-	  x WaitUntil || WaitWhile
-	  
-	 
-	 - Éclairages
-	 
-	  - Spotlight (3)
-	  
-	   x Cabane
-	   x Nest
-	   x Pharaon
-	  
-	  - Point Light (3)
-	  
-	   x Torch
-	   x Feu de camp
-	   x Pickaxe
-	   
-	 - Post-Processing
-	 
-	  x Volume Global
-	   
-	  x Volume Local + In Code Modification
+	Agent 
+	[ 
+		Obstacles : 
+		 
+		 - Dome feu de camps quand activer
+		 - 
+		 - 
+		 
+		Interactions : 
+		
+		 - Effets post-traitement saignement
+		 - Faire jouer un sons de dommage
+		 - Perte de pv et fin de jeu lorsqu'a 0
+	]
+	
+		Un personnage affecté d’une animation en provenance du site Mixamo [www.mixamo.com] doit être bien intégré à l’environnement.
+		L’agent doit se déplacer à l’aide du système de navigation Nav Mesh et avoir comme cible le personnage principal du jeu contenant Main camera.
+		Au moins trois (3) obstacles doivent être intégrés.
+		L’agent doit pouvoir interagir avec le personnage principal afin de provoquer au moins trois (3) actions différentes.
+		Par exemple, modification d’effets post-traitement, modification de propriétés d’objets, faire jouer un son, fin du jeu, etc.
+	
+	
+	Graphes d’effets spéciaux (visual effect graph) 
+	[
+		- 
+		- 
+		- 
+	]
+	
+		Au moins trois (3) objets affectés de différents effets doivent être présents et intégrés dans votre environnement.
+		
+	
+	Shader graph 
+	[
+		- Dome actif lorsque le feu de camps est activé
+		- 
+		- 
+	]
+	
+		Au moins trois (3) objets affectés par différents shader graph doivent être présents et intégrés dans votre environnement.
+		
+	Inventaire 
+	[
+		Affichage de l'inventaire avec la touche "I"
+		
+		5 Objets : 
+		
+			- Pioche
+			- Mask pharaon
+			- Nids
+			- Pile de bois
+			- 
+			
+		Interactions avec items de l'inventaire (3) : 
+		
+			- Activation du feu de camp
+			- Pioche pour détèrer le masque de pharaon
+			- 
+		
+	]
+	
+		Le système d’inventaire présenté en cours utilisant au moins 5 items doit être implanté à votre jeu.
+		L’inventaire doit pouvoir s’afficher/masquer à l’aide de la touche i du clavier (i pour inventaire).
+		L’utilisation de l’inventaire doit pouvoir permettre l’ajout et le retrait d’items.
+		Les items de l’inventaire doivent également servir à au moins trois (3) interactions ou événements conditionnels.
+		

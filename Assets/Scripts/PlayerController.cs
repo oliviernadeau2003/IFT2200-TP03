@@ -153,7 +153,7 @@ public class PlayerController : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        // Si le joueur est entré en collision avec un enemy, l'on perds des points de vie
+        // Si le joueur est entré en collision avec un enemie, l'on perds des points de vie
 
     }
 
