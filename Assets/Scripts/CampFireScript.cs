@@ -21,6 +21,8 @@ public class CampFireScript : MonoBehaviour
     Light campfireLight;
     Light campfireLight2;
 
+    public GameObject domeEffect;
+
     void Start()
     {
         initialPosition = transform.position;
@@ -88,6 +90,7 @@ public class CampFireScript : MonoBehaviour
         isOscillating = true;
         isReturning = false;
 
+        domeEffect.SetActive(true);
         StartCoroutine(IncreaseLightIntensity());
     }
 

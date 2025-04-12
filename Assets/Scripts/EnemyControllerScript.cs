@@ -10,11 +10,6 @@ public class EnemyControllerScript : MonoBehaviour
         SpawnEnemy();
     }
 
-    void Update()
-    {
-        
-    }
-
     private void SpawnEnemy()
     {
         // Instantiate the enemy prefab at the spawn point

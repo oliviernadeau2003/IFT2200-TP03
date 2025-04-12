@@ -1,7 +1,11 @@
+using TMPro;
 using UnityEngine;
+using static UnityEngine.ParticleSystem;
 
 public class WoodPileScript : MonoBehaviour
 {
+
+    public GameObject particles;
     void Start()
     {
         
@@ -15,6 +19,7 @@ public class WoodPileScript : MonoBehaviour
             // Add wood to the player's inventory
 
             // Destroy the wood pile object
+            particles.SetActive(false);
             gameObject.SetActive(false);
         }
     }

@@ -36,6 +36,8 @@ public class PharaonMaskScript : MonoBehaviour
     public float moveSpeed = 1f;    
     public float moveDistance = 0.5f;
 
+    public GameObject particules;
+
 
     void Start()
     {
@@ -96,6 +98,7 @@ public class PharaonMaskScript : MonoBehaviour
 
         movingUp = !movingUp;
         isMaskMoving = false;
+        particules.SetActive(false);
     }
 
     private void SpotlightMovement()

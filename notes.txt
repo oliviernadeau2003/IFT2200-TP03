@@ -25,9 +25,9 @@
 	
 	Graphes d’effets spéciaux (visual effect graph) Particules
 	[
-		- Feu de camp
-		- 
-		- 
+		x Feu de camp fumée
+		x Pharaon particules
+		x Pickup Visual Effect
 	]
 	
 		Au moins trois (3) objets affectés de différents effets doivent être présents et intégrés dans votre environnement.
@@ -35,9 +35,9 @@
 	
 	Shader graph 
 	[
-		- Dome actif lorsque le feu de camps est activé
-		- Glowing masque pharaon
-		- Golden Globe
+		x Dome actif lorsque le feu de camps est activé
+		x Glowing masque pharaon
+		x Golden Globe
 	]
 	
 		Au moins trois (3) objets affectés par différents shader graph doivent être présents et intégrés dans votre environnement.
@@ -58,7 +58,7 @@
 		
 			- Pile de bois pour activer le feu de camp
 			- Pioche pour détèrer le masque de pharaon
-			- Golden globe pour dévérouiller la porte et terminer le jeux
+			- Golden globe pour dévérouiller la porte et terminer le jeux / S'échapper
 		
 	]
 	
