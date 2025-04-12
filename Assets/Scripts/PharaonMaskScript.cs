@@ -62,9 +62,12 @@ public class PharaonMaskScript : MonoBehaviour
 
     void OnMouseDown()
     {
-        if (!isMaskMoving)
+        if (InventoryControllerScript.Present(Items.Pickaxe))
         {
-            StartCoroutine(SlideMask());
+            if (!isMaskMoving)
+            {
+                StartCoroutine(SlideMask());
+            }
         }
     }
 
@@ -97,12 +100,9 @@ public class PharaonMaskScript : MonoBehaviour
             colorAdjustments.postExposure.value = -3f;
         }
 
-        if (InventoryControllerScript.Present(Items.Pickaxe))
-        {
-            // Add the item to the inventory
-            InventoryControllerScript.Add(itemType);
-            InventoryControllerScript.Remove(Items.Pickaxe);
-        }
+        // Add the item to the inventory
+        InventoryControllerScript.Add(itemType);
+        InventoryControllerScript.Remove(Items.Pickaxe);
 
         movingUp = !movingUp;
         isMaskMoving = false;

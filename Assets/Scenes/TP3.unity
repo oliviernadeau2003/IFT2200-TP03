@@ -3699,6 +3699,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   particles: {fileID: 109849638}
+  itemType: 0
 --- !u!65 &815905157
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9433,6 +9434,7 @@ MonoBehaviour:
   moveSpeed: 1
   moveDistance: 0.5
   particules: {fileID: 1043345923}
+  itemType: 3
 --- !u!1 &1867026309
 GameObject:
   m_ObjectHideFlags: 0
@@ -9914,6 +9916,7 @@ MonoBehaviour:
   liftSpeed: 0.2
   rotationSpeed: 50
   disappearanceTime: 1.2
+  itemType: 1
 --- !u!65 &1962855004
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10222,6 +10225,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2045643897}
+  - component: {fileID: 2045643898}
   m_Layer: 0
   m_Name: Inventory
   m_TagString: Untagged
@@ -10246,6 +10250,18 @@ Transform:
   - {fileID: 134640867}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2045643898
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2045643896}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb47b83510b21ac43873069f0fa9c3e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2047570606
 GameObject:
   m_ObjectHideFlags: 0
@@ -11458,6 +11474,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f14d15e81100624da08881a49b1dca8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Items: 2
   jumpHeight: 1.5
   jumpSpeed: 0.7
   waitTime: 0.5

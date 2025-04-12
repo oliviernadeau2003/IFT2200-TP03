@@ -1,6 +1,4 @@
-using System.Globalization;
 using UnityEngine;
-using UnityEngine.Rendering.Universal;
 
 public enum Items { Wood_stack, Bird_nest, Pickaxe, Phraon_mask,Golden_globe }
 public class InventoryControllerScript : MonoBehaviour
