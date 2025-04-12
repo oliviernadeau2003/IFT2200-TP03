@@ -48,10 +48,10 @@
 		
 		5 Objets : 
 		
+			- Pile de bois
+			- Nids
 			- Pioche
 			- Mask pharaon
-			- Nids
-			- Pile de bois
 			- Golden globe
 			
 		Interactions avec items de l'inventaire (3) : 
