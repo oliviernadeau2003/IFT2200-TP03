@@ -3,6 +3,8 @@ using System.Collections;
 
 public class PikaxeScript : MonoBehaviour
 {
+    public Items Items = Items.Pickaxe;  // The item type for the pickaxe
+
     public float jumpHeight = 1.5f;  // The height of the jump
     public float jumpSpeed = 0.7f;   // Speed at which the pickaxe rises and falls
     public float waitTime = 0.5f;    // Time before the next jump
@@ -58,6 +60,9 @@ public class PikaxeScript : MonoBehaviour
 
         // After rotation, wait for a short delay before disappearing
         yield return new WaitForSeconds(0.5f);  // Wait for 0.5 seconds before hiding
+
+        // Add the item to the inventory
+        InventoryControllerScript.Add(Items);  // Add the pickaxe to the inventory
 
         // Make the pickaxe disappear (could be destroyed or hidden)
         gameObject.SetActive(false);  // Hides the pickaxe

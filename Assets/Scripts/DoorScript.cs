@@ -40,10 +40,14 @@ public class DoorScript : MonoBehaviour
 
     void OnMouseDown()
     {
-        if (!isOpening)
+        if (InventoryControllerScript.Present(Items.Golden_globe))
         {
-            isOpening = true;
-            openTime = 0f;
+            if (!isOpening)
+            {
+                isOpening = true;
+                openTime = 0f;
+            }
+            InventoryControllerScript.Remove(Items.Golden_globe);
         }
     }
 }

@@ -6,10 +6,7 @@ public class WoodPileScript : MonoBehaviour
 {
 
     public GameObject particles;
-    void Start()
-    {
-        
-    }
+    public Items itemType = Items.Wood_stack; // Type of item to be added to the inventory
 
     private void OnMouseDown()
     {
@@ -17,6 +14,7 @@ public class WoodPileScript : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             // Add wood to the player's inventory
+            InventoryControllerScript.Add(itemType);
 
             // Destroy the wood pile object
             particles.SetActive(false);

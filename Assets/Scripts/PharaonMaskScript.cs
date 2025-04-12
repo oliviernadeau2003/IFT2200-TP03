@@ -38,6 +38,7 @@ public class PharaonMaskScript : MonoBehaviour
 
     public GameObject particules;
 
+    public Items itemType = Items.Phraon_mask; // Type of item this nest represents
 
     void Start()
     {
@@ -94,6 +95,13 @@ public class PharaonMaskScript : MonoBehaviour
         if (volume.sharedProfile.TryGet(out colorAdjustments))
         {
             colorAdjustments.postExposure.value = -3f;
+        }
+
+        if (InventoryControllerScript.Present(Items.Pickaxe))
+        {
+            // Add the item to the inventory
+            InventoryControllerScript.Add(itemType);
+            InventoryControllerScript.Remove(Items.Pickaxe);
         }
 
         movingUp = !movingUp;

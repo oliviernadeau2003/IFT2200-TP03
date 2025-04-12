@@ -18,6 +18,8 @@ public class NestScript : MonoBehaviour
     float targetShakeAmount;
     bool isLifted = false;
 
+    public Items itemType = Items.Bird_nest; // Type of item this nest represents
+
     void Start()
     {
         initialPosition = transform.position;
@@ -84,6 +86,8 @@ public class NestScript : MonoBehaviour
 
         yield return new WaitForSeconds(disappearanceTime);
 
+        // Add the item to the inventory
+        InventoryControllerScript.Add(itemType);
         gameObject.SetActive(false);
     }
 }

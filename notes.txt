@@ -48,16 +48,16 @@
 		
 		5 Objets : 
 		
-			- Pile de bois
-			- Nids
-			- Pioche
-			- Mask pharaon
-			- Golden globe
+			x Pile de bois
+			x Nids
+			x Pioche
+			x Mask pharaon
+			x Golden globe
 			
 		Interactions avec items de l'inventaire (3) : 
 		
-			- Pile de bois pour activer le feu de camp
-			- Pioche pour détèrer le masque de pharaon
+			x Pile de bois pour activer le feu de camp
+			x Pioche pour détèrer le masque de pharaon
 			- Golden globe pour dévérouiller la porte et terminer le jeux / S'échapper
 		
 	]

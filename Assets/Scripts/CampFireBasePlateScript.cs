@@ -9,7 +9,11 @@ public class BasePlateClick : MonoBehaviour
     {
         if (campfire != null)
         {
-            campfire.OnBasePlateClicked();
+            if (InventoryControllerScript.Present(Items.Wood_stack))
+            {   
+                campfire.OnBasePlateClicked();
+                InventoryControllerScript.Remove(Items.Wood_stack);
+            }
         }
     }
 }
